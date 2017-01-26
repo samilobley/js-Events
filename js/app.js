@@ -38,13 +38,10 @@ Next, create a function named valueMenu that will display your favorite items in
 var menu = ["Chicken Nuggets", "Fries", "Burger"];
 
 function valueMenu(){
-	var menuText = "";
-	for (var i = 0; i < menuList.length; i++){
-		menuText += menuList[i] + ",";
-	}
+	var mcMenu = document.getElementById("menu");
+	mcMenu.innerHTML = menu;
 
 }
-
 
 
 //5. Gin.
