@@ -74,10 +74,18 @@ function showPrice(){
 //7. Mr. Buttons
 /*Add an Event Listener to the button that will display `myQuote` inside the paragraph with the id of `displayQuote` after the button is clicked.*/
 
-EventListener
-
 var myQuote = "Our lives are defined by opportunities; even the ones we miss.";
 
+var btnElem = document.getElementById("Benjamin");
+
+btnElem.addEventListener("click", showQuote);
+
+function showQuote(){
+  var pElem = document.getElementById("displayQuote");
+  pElem.innerHTML = myQuote;
+
+
+}
 
 
 //8. Say It again, Randomly
@@ -85,9 +93,28 @@ var myQuote = "Our lives are defined by opportunities; even the ones we miss.";
 
 var quotes = ["It's a funny thing about comin' home. Looks the same, smells the same, feels the same. You'll realize what's changed is you.", "Momma? Momma? Some days, I feel different than the day before.", "Some people, were born to sit by a river. Some get struck by lightning. Some have an ear for music. Some are artists. Some swim. Some know buttons. Some know Shakespeare. Some are mothers. And some people, dance.", "For what it's worth, it's never too late to be whoever you want to be."];
 
+var randomElem = document.getElementById("random");
 
+randomElem.addEventListener("click", randomQuotes);
+
+function randomQuotes(){
+  var pubRan = Math.floor(Math.random()*quotes.length);
+  displayQuotes.innerHTML = quotes[pubRan];
+
+}
 
 
 //9. Unlock the Secret to Financial Freedom
 /*Create an event listener that will show and hide the message when clickig on the button.
 */
+
+showHide.addEventListener("click", display);
+
+function display(){
+  if(showmoney.style.display === "none"){
+    showmoney.style.display = "block";
+  }else{
+    showmoney.style.display = "none";
+  }
+}
+
